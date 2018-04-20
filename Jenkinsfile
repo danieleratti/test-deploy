@@ -5,12 +5,12 @@ pipeline {
       parallel {
         stage('prova') {
           steps {
-            mail(subject: 'Prova', body: 'Prova Deploy!!', to: 'danieleratti1992@gmail.com')
+            echo 'Hello World!'
           }
         }
-        stage('') {
+        stage('Ciao') {
           steps {
-            sh 'echo "ciao" > "ciao.txt"'
+            sh 'echo "ciao2" > "ciao2.txt"'
             archiveArtifacts(artifacts: '*', allowEmptyArchive: true)
           }
         }
